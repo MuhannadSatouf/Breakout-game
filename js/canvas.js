@@ -12,7 +12,7 @@ let ballRadius = 5;
 function drawBall() {
   canvasContext.beginPath();
   canvasContext.arc(x, y, ballRadius, 0, Math.PI * 2);
-  canvasContext.fillStyle = "#0095DD";
+  canvasContext.fillStyle = "#00008B";
   canvasContext.fill();
   canvasContext.closePath();
 }
@@ -20,6 +20,8 @@ function drawBall() {
 function draw() {
   canvasContext.clearRect(0, 0, canvas.width, canvas.height);
   drawBall();
+  drawPaddle();
+  movePaddle();
   checkWall();
 }
 
@@ -36,9 +38,6 @@ function checkWall() {
   ) {
     newPositionY = -newPositionY;
   }
-
   x += newPositionX;
   y += newPositionY;
 }
-//For continues drawing
-setInterval(draw, 10);

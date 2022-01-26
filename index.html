@@ -8,8 +8,16 @@
     <title>Breakout Game</title>
   </head>
   <body>
-    <canvas id="myCanvas" width="480" height="320"></canvas>
+    <div class="canvasDiv">
+      <canvas id="myCanvas" width="480" height="320"></canvas>
+    </div>
+    <div class="button">
+      <button class="startPlayButton" onclick="setInterval(draw, 10)">
+        Click Me To Play
+      </button>
+    </div>
   </body>
 
   <script src="js/canvas.js"></script>
+  <script src="js/paddle.js"></script>
 </html>

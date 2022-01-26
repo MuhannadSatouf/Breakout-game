@@ -6,20 +6,52 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
-  font-family: "Lora", serif;
-  font-size: 17px;
-  hyphens: auto;
-  line-height: 130%;
+}
+
+/*
+.myDiv {
+  padding: 20px;
+  margin: 0px auto;
+  position: relative;
+  text-align: center;
 }
 
 canvas {
+
+  display: block;
+  margin-top: 60px;
+  background-color: wheat;
+}
+
+.startPlayButton {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  background-color: black;
+  margin-top: 20px;
+  text-align: center;
+  background-color: white;
+}
+*/
+
+.canvasDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+canvas {
+  margin-top: 60px;
+  background-color: white;
+  width: 80%;
+  height: 80%;
+}
+.startPlayButton {
+  border: 1px solid gray;
+  border-radius: 7%;
+  word-wrap: break-word;
+  width: 100px;
+  max-width: 100%;
 }
