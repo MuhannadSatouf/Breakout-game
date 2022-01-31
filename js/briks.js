@@ -47,6 +47,8 @@ function brokeBreaks() {
           newPositionY = -newPositionY;
           b.status = 0;
           score++;
+          updateScore(score);
+          console.log(score);
           if (score == brickRowCount * columnBricks) {
             alert("COOOOOOOOOOOOOOOOL !");
             document.location.reload();
@@ -55,4 +57,9 @@ function brokeBreaks() {
       }
     }
   }
+}
+
+function updateScore(score) {
+  let newScore = document.getElementById("score");
+  newScore.innerHTML = score;
 }

@@ -1,6 +1,6 @@
 body {
   background-image: url("/media/background.jpg");
-  margin: 0;
+
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -14,7 +14,6 @@ body {
   height: 420px;
 }
 .mainDiv {
-  margin-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,6 +23,23 @@ body {
   margin-top: 40px;
   border: 1px solid rgb(129, 37, 37);
   border-radius: 15%;
-  background-color: aea8b5;
+  background-color: #aea8b5;
   width: 80px;
+}
+
+p {
+  color: #9333ff;
+  font-size: 30px;
+  align-items: flex-start;
+}
+
+.scoreDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.pDiv {
+  display: flex;
+  flex-direction: row;
+  margin: auto 50px;
 }

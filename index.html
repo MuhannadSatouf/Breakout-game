@@ -11,12 +11,17 @@
   <header></header>
 
   <body>
-    <div class="mainDiv">
-      <canvas id="myCanvas" width="580" height="420"></canvas>
-
-      <button class="startPlayButton" onclick="setInterval(main, 15)">
-        Click Me To Play
-      </button>
+    <div class="scoreDiv">
+      <div class="pDiv">
+        <p>Score:</p>
+        <p id="score">0</p>
+      </div>
+      <div class="mainDiv">
+        <canvas id="myCanvas" width="580" height="420"></canvas>
+        <button class="startPlayButton" onclick="setInterval(main, 15)">
+          Click Me To Play
+        </button>
+      </div>
     </div>
   </body>
 
