@@ -5,14 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
+
     <title>Breakout Game</title>
   </head>
+  <header></header>
+
   <body>
-    <div class="canvasDiv">
-      <canvas id="myCanvas" width="480" height="320"></canvas>
-    </div>
-    <div class="button">
-      <button class="startPlayButton" onclick="setInterval(draw, 10)">
+    <div class="mainDiv">
+      <canvas id="myCanvas" width="580" height="420"></canvas>
+
+      <button class="startPlayButton" onclick="setInterval(main, 15)">
         Click Me To Play
       </button>
     </div>
@@ -20,4 +22,7 @@
 
   <script src="js/canvas.js"></script>
   <script src="js/paddle.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/ball.js"></script>
+  <script src="js/briks.js"></script>
 </html>

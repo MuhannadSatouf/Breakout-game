@@ -1,6 +1,5 @@
 body {
   background-image: url("/media/background.jpg");
-
   margin: 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -8,50 +7,23 @@ body {
   background-position: center center;
 }
 
-/*
-.myDiv {
-  padding: 20px;
-  margin: 0px auto;
-  position: relative;
-  text-align: center;
+#myCanvas {
+  background-color: #aea8b5;
+  border: 2px solid black;
+  width: 580px;
+  height: 420px;
 }
-
-canvas {
-
-  display: block;
-  margin-top: 60px;
-  background-color: wheat;
-}
-
-.startPlayButton {
-  position: absolute;
-  margin-top: 20px;
-  text-align: center;
-  background-color: white;
-}
-*/
-
-.canvasDiv {
-  display: flex;
-  justify-content: center;
-}
-
-.button {
+.mainDiv {
   margin-top: 40px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-canvas {
-  margin-top: 60px;
-  background-color: white;
-  width: 80%;
-  height: 80%;
-}
 .startPlayButton {
-  border: 1px solid gray;
-  border-radius: 7%;
-  word-wrap: break-word;
-  width: 100px;
-  max-width: 100%;
+  margin-top: 40px;
+  border: 1px solid rgb(129, 37, 37);
+  border-radius: 15%;
+  background-color: aea8b5;
+  width: 80px;
 }

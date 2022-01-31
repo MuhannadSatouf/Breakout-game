@@ -1,27 +1,31 @@
-let paddleHeight = 8;
-let paddleWidth = 60;
-let paddleX = (canvas.width - paddleWidth) / 2;
-
+let paddleHeight = 15;
+let paddleWidth = 80;
+// The Paddle wil be at the middle at the beginning
+let xPaddlePosition = (canvasWidth - paddleWidth) / 2;
+//Right and Left movements.
 let right = false;
 let left = false;
 
 function drawPaddle() {
   canvasContext.beginPath();
   canvasContext.rect(
-    paddleX,
-    canvas.height - paddleHeight,
+    xPaddlePosition,
+    canvasHeight - paddleHeight,
     paddleWidth,
     paddleHeight
   );
-  canvasContext.fillStyle = "#00008B";
+  canvasContext.fillStyle = "#9333ff";
   canvasContext.fill();
   canvasContext.closePath();
 }
 
 function movePaddle() {
+  document.addEventListener("mousemove", mouseHandler, false);
   document.addEventListener("keydown", moveKeyPressed, false);
   document.addEventListener("keyup", moveKeyNotPressed, false);
+
   moveLeftAndRight();
+  //mouseHandler();
 }
 
 function moveKeyPressed(event) {
@@ -57,15 +61,16 @@ function moveKeyNotPressed(event) {
 }
 
 function moveLeftAndRight() {
-  if (right) {
-    paddleX += 7;
-    if (paddleX + paddleWidth > canvas.width) {
-      paddleX = canvas.width - paddleWidth;
-    }
-  } else if (left) {
-    paddleX -= 7;
-    if (paddleX < 0) {
-      paddleX = 0;
-    }
+  if (right && xPaddlePosition < canvasWidth - paddleWidth) {
+    xPaddlePosition += 7;
+  } else if (left && xPaddlePosition > 0) {
+    xPaddlePosition -= 7;
+  }
+}
+
+function mouseHandler(event) {
+  var x = event.clientX - canvas.offsetLeft;
+  if (x > 0 && x < canvasWidth) {
+    paddleX = x - paddleWidth / 2;
   }
 }
