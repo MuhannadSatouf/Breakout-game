@@ -13,7 +13,7 @@ body {
   width: 580px;
   height: 420px;
 }
-.mainDiv {
+.bodyDiv {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,12 +28,12 @@ body {
 }
 
 p {
-  color: #9333ff;
+  color: #dadada;
   font-size: 30px;
   align-items: flex-start;
 }
 
-.scoreDiv {
+.mainDiv {
   display: flex;
   flex-direction: column;
 }
@@ -42,4 +42,15 @@ p {
   display: flex;
   flex-direction: row;
   margin: auto 50px;
+  justify-content: space-between;
+}
+
+.livesDiv .scoreDiv {
+  display: flex;
+  flex-direction: row;
+}
+
+.highDiv {
+  display: flex;
+  flex-direction: row;
 }

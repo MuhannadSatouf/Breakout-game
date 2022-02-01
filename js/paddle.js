@@ -25,7 +25,6 @@ function movePaddle() {
   document.addEventListener("keyup", moveKeyNotPressed, false);
 
   moveLeftAndRight();
-  //mouseHandler();
 }
 
 function moveKeyPressed(event) {

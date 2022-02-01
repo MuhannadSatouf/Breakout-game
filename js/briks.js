@@ -1,4 +1,4 @@
-score = 0;
+let score = 0;
 let brickRowCount = 9;
 let columnBricks = 5;
 let brickWidth = 50;
@@ -46,13 +46,12 @@ function brokeBreaks() {
         ) {
           newPositionY = -newPositionY;
           b.status = 0;
-          score++;
-          updateScore(score);
-          console.log(score);
-          if (score == brickRowCount * columnBricks) {
+          score += 10;
+          if (score == brickRowCount * columnBricks * 10) {
             alert("COOOOOOOOOOOOOOOOL !");
             document.location.reload();
           }
+          updateScore(score);
         }
       }
     }
@@ -61,5 +60,5 @@ function brokeBreaks() {
 
 function updateScore(score) {
   let newScore = document.getElementById("score");
-  newScore.innerHTML = score;
+  newScore.innerHTML = "Score:" + score;
 }

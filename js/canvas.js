@@ -1,3 +1,4 @@
+let lives = 3;
 //Create My Canvas that will contains everything
 let canvas = document.getElementById("myCanvas");
 /*
@@ -31,10 +32,26 @@ function checkWalls() {
     if (x > xPaddlePosition && x < xPaddlePosition + paddleWidth) {
       newPositionY = -newPositionY;
     } else {
-      alert("Game Over");
-      document.location.reload();
+      lives--;
+      console.log(lives);
+      if (!lives) {
+        alert("Game Over");
+        document.location.reload();
+      } else {
+        x = canvasWidth / 2;
+        y = canvasHeight - 30;
+        newPositionX = 3;
+        newPositionY = -3;
+        paddleX = (canvasWidth - paddleWidth) / 2;
+        updateLives(lives);
+      }
     }
   }
   x += newPositionX;
   y += newPositionY;
+}
+
+function updateLives() {
+  let liveCounter = document.getElementById("lives");
+  liveCounter.innerHTML = "Lives:" + lives;
 }
